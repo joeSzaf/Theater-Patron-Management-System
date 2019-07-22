@@ -2,17 +2,16 @@ import unittest
 from Theater import Theater
 from Show import Show
 from Patron import Patron
-from datetime import datetime
 
 # pytest
 
-class ShowTest(unittest.TestCase):
+class TheaterTest(unittest.TestCase):
 
     def setUp(self):
-        self.show1 = Show("Mainstage", "07-01-2019 20:00:00", "07-01-2019 21:30:00", 20, "improv")
-        self.show2 = Show("Comedy Lab", "07-01-2019 19:30:00", "07-01-2019 21:00:00", 15)
-        self.show3 = Show("Peoples Show", "07-01-2019 21:30:00", "07-01-2019 23:00:00", 5, "standup")
-        self.show4 = Show("Sketch Planet", "07-01-2019 18:00:00", "07-01-2019 19:30:00", 15, "sketch")
+        self.show1 = Show("Mainstage", "07-01-2019 20:00", "07-01-2019 21:30", 20, "improv")
+        self.show2 = Show("Comedy Lab", "07-01-2019 19:30", "07-01-2019 21:00", 15)
+        self.show3 = Show("Peoples Show", "07-01-2019 21:30", "07-01-2019 23:00", 5, "standup")
+        self.show4 = Show("Sketch Planet", "07-01-2019 18:00", "07-01-2019 19:30", 15, "sketch")
 
         self.patron1 = Patron("Janes", "Lashe", "jlashe@gmail.com", ["improv"])
         self.patron2 = Patron("Callahan", "Burgess", "cburg@gmail.com", ["standup", "drama"])
