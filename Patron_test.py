@@ -12,8 +12,10 @@ class ShowTest(unittest.TestCase):
         self.patron3 = Patron("Gaugino", "Julio", "cjules@gmail.com")
         self.patron4 = Patron("Wilhelmina", "Smith", "wilhelmsmith@gmail.com", ["improv", "sketch", "standup"])
 
-        self.show1 = Show("Mainstage", "07-01-2019 20:00", "07-01-2019 21:30", 20, "improv")
-        self.show3 = Show("Peoples Show", "07-01-2019 21:30", "07-01-2019 23:00", 5, "standup")
+        self.show1 = Show("Mainstage", "07-01-2019 20:00", "07-01-2019 21:30", 20, 90, "improv")
+        self.show2 = Show("Comedy Lab", "07-01-2019 19:30", "07-01-2019 21:00", 15, 40)
+        self.show3 = Show("Peoples Show", "07-01-2019 21:30", "07-01-2019 23:00", 5, 40, "standup")
+        self.show4 = Show("Sketch Planet", "07-01-2019 18:00", "07-01-2019 19:30", 15, 40, "sketch")
 
     def test_Patron_displays_correct_name(self):
         self.assertEqual(self.patron1.get_full_name(), "Janes Lashe")
@@ -37,4 +39,3 @@ class ShowTest(unittest.TestCase):
         self.assertEqual(self.patron3.match_preference(self.show1), True)
         self.assertEqual(self.patron3.match_preference(self.show3), True)
         self.assertEqual(self.patron4.match_preference(self.show3), True)
-

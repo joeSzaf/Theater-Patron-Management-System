@@ -17,4 +17,3 @@ class Patron:
 
     def match_preference(self, show):
         return show.get_category() in self.__preferences
-
