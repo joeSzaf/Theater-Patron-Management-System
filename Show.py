@@ -1,5 +1,3 @@
-from datetime import time
-
 class Show:
 
     def __init__(self, name, start_time, end_time, category = "improv"):
