@@ -7,10 +7,10 @@ from datetime import datetime
 class ShowTest(unittest.TestCase):
 
     def setUp(self):
-        self.show1 = Show("Mainstage", "07-01-2019 20:00:00", "07-01-2019 21:30:00", "improv")
-        self.show2 = Show("Comedy Lab", "07-01-2019 19:30:00", "07-01-2019 21:00:00")
-        self.show3 = Show("Peoples Show", "07-01-2019 21:30:00", "07-01-2019 23:00:00", "standup")
-        self.show4 = Show("Sketch Planet", "07-01-2019 18:00:00", "07-01-2019 19:30:00", "sketch")
+        self.show1 = Show("Mainstage", "07-01-2019 20:00:00", "07-01-2019 21:30:00", 20, "improv")
+        self.show2 = Show("Comedy Lab", "07-01-2019 19:30:00", "07-01-2019 21:00:00", 15)
+        self.show3 = Show("Peoples Show", "07-01-2019 21:30:00", "07-01-2019 23:00:00", 5, "standup")
+        self.show4 = Show("Sketch Planet", "07-01-2019 18:00:00", "07-01-2019 19:30:00", 15, "sketch")
 
     def test_Show_displays_correct_name(self):
         self.assertEqual(self.show1.get_name(), "Mainstage")
@@ -35,4 +35,10 @@ class ShowTest(unittest.TestCase):
         self.assertEqual(self.show2.get_category(), "improv")
         self.assertEqual(self.show3.get_category(), "standup")
         self.assertEqual(self.show4.get_category(), "sketch")
+        
+    def test_Show_returns_correct_ticket_price(self):
+        self.assertEqual(self.show1.get_ticket_price(), 20)
+        self.assertEqual(self.show2.get_ticket_price(), 15)
+        self.assertEqual(self.show3.get_ticket_price(), 5)
+        self.assertEqual(self.show4.get_ticket_price(), 15)
 
