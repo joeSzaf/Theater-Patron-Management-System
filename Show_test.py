@@ -1,7 +1,6 @@
 import unittest
 from Show import Show
 from Patron import Patron
-from datetime import datetime
 
 # pytest
 
