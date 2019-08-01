@@ -7,7 +7,7 @@ from Show import Show
 class ShowTest(unittest.TestCase):
 
     def setUp(self):
-        self.patron1 = Patron("Janes", "Lashe", "jlashe@gmail.com", preferences = ["improv"])
+        self.patron1 = Patron("Janes", "Lashe", "jlashe@gmail.com", preferences=["improv"])
         self.patron2 = Patron("Callahan", "Burgess", "cburg@gmail.com", preferences = ["standup", "drama"])
         self.patron3 = Patron("Gaugino", "Julio", "cjules@gmail.com")
         self.patron4 = Patron("Wilhelmina", "Smith", "wilhelmsmith@gmail.com", [("07-01-2019 10:00", "07-01-2019 17:00"), ("07-01-2019 18:30", "07-01-2019 22:00")], ["improv", "sketch", "standup"])

@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class TimeRange:
     def __init__(self, start_time, end_time):
         self.__start_time = datetime.strptime(start_time, '%m-%d-%Y %H:%M')

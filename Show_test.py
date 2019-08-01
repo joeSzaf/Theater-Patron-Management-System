@@ -24,17 +24,17 @@ class ShowTest(unittest.TestCase):
         self.assertEqual(self.show3.get_name(), "Peoples Show")
         self.assertEqual(self.show4.get_name(), "Sketch Planet")
 
-    # def test_Show_displays_correct_start_time(self):
-    #     self.assertEqual(self.show1.get_start_time(), "07-01-2019 20:00")
-    #     self.assertEqual(self.show2.get_start_time(), "07-01-2019 19:30")
-    #     self.assertEqual(self.show3.get_start_time(), "07-01-2019 21:30")
-    #     self.assertEqual(self.show4.get_start_time(), "07-01-2019 18:00")
-    #
-    # def test_Show_displays_correct_end_time(self):
-    #     self.assertEqual(self.show1.get_end_time(), "07-01-2019 21:30")
-    #     self.assertEqual(self.show2.get_end_time(), "07-01-2019 21:00")
-    #     self.assertEqual(self.show3.get_end_time(), "07-01-2019 23:00")
-    #     self.assertEqual(self.show4.get_end_time(), "07-01-2019 19:30")
+    def test_Show_displays_correct_start_time(self):
+        self.assertEqual(self.show1.get_start_time(), "07-01-2019 20:00")
+        self.assertEqual(self.show2.get_start_time(), "07-01-2019 19:30")
+        self.assertEqual(self.show3.get_start_time(), "07-01-2019 21:30")
+        self.assertEqual(self.show4.get_start_time(), "07-01-2019 18:00")
+
+    def test_Show_displays_correct_end_time(self):
+        self.assertEqual(self.show1.get_end_time(), "07-01-2019 21:30")
+        self.assertEqual(self.show2.get_end_time(), "07-01-2019 21:00")
+        self.assertEqual(self.show3.get_end_time(), "07-01-2019 23:00")
+        self.assertEqual(self.show4.get_end_time(), "07-01-2019 19:30")
 
     def test_Show_displays_correct_category(self):
         self.assertEqual(self.show1.get_category(), "improv")

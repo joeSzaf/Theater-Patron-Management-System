@@ -2,7 +2,7 @@ from TimeRange import TimeRange
 
 class Patron:
 
-    def __init__(self, first_name, last_name, email, availability = [("07-01-2019 00:00", "07-02-2019 00:00")], preferences = ["improv", "sketch", "standup", "drama"]):
+    def __init__(self, first_name, last_name, email, availability=[("07-01-2019 00:00", "07-02-2019 00:00")], preferences=["improv", "sketch", "standup", "drama"]):
         self.__first_name = first_name
         self.__last_name = last_name
         self.__email = email
